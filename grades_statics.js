@@ -9,3 +9,20 @@ function rangeOfGrades() {
 
     console.log(rangeOfGrades)
 }
+
+function median() {
+    grades.sort(function (a, b) {
+        return a - b
+    });
+    if (grades.length % 2 == 0) {
+        let meansNum1 = grades.length / 2;
+        let meansNum2 = grades.length / 2 + 1;
+        median = (grades[meansNum1 - 1] + grades[meansNum2 - 1]) / 2;
+        console.log(median)
+    }
+    else {
+        let meansNum3 = Math.floor(grades.length / 2);
+        median = grades[meansNum3]
+        console.log(median)
+    }
+}
