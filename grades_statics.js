@@ -26,3 +26,24 @@ function median() {
         console.log(median)
     }
 }
+
+function rangeOfGrades2() {
+    if (grades.length % 2 == 0) {
+        let meansNum = grades.length / 2
+        secondHalf = grades.slice(meansNum, grades.length)
+        secondHalf.sort(function (a, b) {
+            return a - b
+        });
+        rangeOfGrades2 = secondHalf[secondHalf.length - 1] - secondHalf[0];
+        console.log(rangeOfGrades2)
+    }
+    else {
+        let meansNum = Math.floor(grades.length / 2)
+        secondHalf = grades.slice(meansNum, grades.length)
+        secondHalf.sort(function (a, b) {
+            return a - b
+        });
+        rangeOfGrades2 = secondHalf[secondHalf.length - 1] - secondHalf[0];
+        console.log(rangeOfGrades2)
+    }
+}
