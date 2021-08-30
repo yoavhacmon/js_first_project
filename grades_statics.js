@@ -11,6 +11,9 @@ function rangeOfGrades() {
 }
 
 function median() {
+    grades.sort(function (a, b) {
+        return a - b
+    });
     if (grades.length % 2 == 0) {
         let meansNum1 = grades.length / 2;
         let meansNum2 = grades.length / 2 + 1;
@@ -24,17 +27,23 @@ function median() {
     }
 }
 
-function secondHalf() {
+function rangeOfGrades2() {
     if (grades.length % 2 == 0) {
         let meansNum = grades.length/2
         secondHalf = grades.slice(meansNum, grades.length)
-        console.log(secondHalf)
+        secondHalf.sort(function (a, b) {
+            return a - b
+        });
+        rangeOfGrades2 = secondHalf[secondHalf.length -1] - secondHalf[0];
+        console.log(rangeOfGrades2)
     }
     else {
         let meansNum = Math.floor(grades.length / 2)
         secondHalf = grades.slice(meansNum, grades.length)
-        console.log(secondHalf)
+        secondHalf.sort(function (a, b) {
+            return a - b
+        });
+        rangeOfGrades2 = secondHalf[secondHalf.length -1] - secondHalf[0];
+        console.log(rangeOfGrades2)
     }    
-
-
 }
